@@ -5,7 +5,6 @@
 - focus on people, and how they can interact with the environment and/or take benefit from it
 - include sensors.
 
-test3
 
 The smart environment comprises a series of sensors that help people during training.
 
