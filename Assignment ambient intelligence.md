@@ -5,8 +5,6 @@
 - focus on people, and how they can interact with the environment and/or take benefit from it
 - include sensors.
 
-test test
-
 The smart environment comprises a series of sensors that help people during training.
 
 When the customer enters the gym the presence is detected by some long term sensors that communicate with the smartphone's Bluetooth, this confirms the reservation made by phone. The same happens when the presence is detected inside a specific room, the training proposed depends on it.
