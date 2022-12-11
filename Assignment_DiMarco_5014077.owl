@@ -1,0 +1,899 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/giova/ontologies/2022/7/untitled-ontology-16"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/giova/ontologies/2022/7/untitled-ontology-16">
+    <Prefix name="" IRI="http://www.semanticweb.org/giova/ontologies/2022/7/untitled-ontology-16#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Activity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Arms"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Back"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BodyParts"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Bodybuilding"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Chest"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Chest_press"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Clients"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CrossFit_room"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Crossfit"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Curl"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Dips"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EvenDaysTraining"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Gianluca"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HighIntSports"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Intencity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Legs"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LowIntSports"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Maria"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MediumIntSports"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OddDaysTraining"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Paolo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PullUp"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Rooms"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Shoulder"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Shoulder_press"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Squat"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TightCoolDown"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Trainers"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Valeria"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Weigh_room"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WideCoolDown"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#HasIntencity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#HasLocated"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#IsBodyPartOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#IsLocatedOn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#IsTrainerOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#TrainedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#UseThisBodyPart"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#CoolDown"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#NumberPeopleInsideRoom"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#RemainingCapacity"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#chancesOfInjuries"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ChestPressSerie1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Client1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CurlSerie1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#High"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Low"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Medium"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PullUpSerie1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SquatSerie1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SquatSerie2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#client2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#client3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#client4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#client5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#client6"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#EvenDaysTraining"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Activity"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#TrainedBy"/>
+                <Class IRI="#Maria"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#EvenDaysTraining"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Activity"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#TrainedBy"/>
+                <Class IRI="#Paolo"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#HighIntSports"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#UseThisBodyPart"/>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#HasIntencity"/>
+                <NamedIndividual IRI="#High"/>
+            </ObjectHasValue>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Intencity"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#High"/>
+            <NamedIndividual IRI="#Low"/>
+            <NamedIndividual IRI="#Medium"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#LowIntSports"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#UseThisBodyPart"/>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#HasIntencity"/>
+                <NamedIndividual IRI="#Low"/>
+            </ObjectHasValue>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#MediumIntSports"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#UseThisBodyPart"/>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#HasIntencity"/>
+                <NamedIndividual IRI="#Medium"/>
+            </ObjectHasValue>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#OddDaysTraining"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Activity"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#TrainedBy"/>
+                <Class IRI="#Gianluca"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#OddDaysTraining"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Activity"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#TrainedBy"/>
+                <Class IRI="#Valeria"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#TightCoolDown"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Activity"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#CoolDown"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:integer"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxExclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">120</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#WideCoolDown"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Activity"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#CoolDown"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:integer"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">120</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#Arms"/>
+        <Class IRI="#BodyParts"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Arms"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#HasIntencity"/>
+            <NamedIndividual IRI="#Low"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Back"/>
+        <Class IRI="#BodyParts"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Back"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#HasIntencity"/>
+            <NamedIndividual IRI="#High"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bodybuilding"/>
+        <Class IRI="#Activity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bodybuilding"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#IsLocatedOn"/>
+            <Class IRI="#Weigh_room"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Chest"/>
+        <Class IRI="#BodyParts"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Chest"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#HasIntencity"/>
+            <NamedIndividual IRI="#Medium"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Chest_press"/>
+        <Class IRI="#Bodybuilding"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Chest_press"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#TrainedBy"/>
+            <Class IRI="#Maria"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Chest_press"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#UseThisBodyPart"/>
+            <Class IRI="#Chest"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CrossFit_room"/>
+        <Class IRI="#Rooms"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Crossfit"/>
+        <Class IRI="#Activity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Crossfit"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#IsLocatedOn"/>
+            <Class IRI="#CrossFit_room"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Curl"/>
+        <Class IRI="#Bodybuilding"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Curl"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#TrainedBy"/>
+            <Class IRI="#Valeria"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Curl"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#UseThisBodyPart"/>
+            <Class IRI="#Arms"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Dips"/>
+        <Class IRI="#Crossfit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Dips"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#TrainedBy"/>
+            <Class IRI="#Valeria"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Dips"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#UseThisBodyPart"/>
+            <Class IRI="#Arms"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EvenDaysTraining"/>
+        <Class IRI="#Activity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Gianluca"/>
+        <Class IRI="#Trainers"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HighIntSports"/>
+        <Class IRI="#Activity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Legs"/>
+        <Class IRI="#BodyParts"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Legs"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#HasIntencity"/>
+            <NamedIndividual IRI="#High"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LowIntSports"/>
+        <Class IRI="#Activity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Maria"/>
+        <Class IRI="#Trainers"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MediumIntSports"/>
+        <Class IRI="#Activity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OddDaysTraining"/>
+        <Class IRI="#Activity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Paolo"/>
+        <Class IRI="#Trainers"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PullUp"/>
+        <Class IRI="#Crossfit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PullUp"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#TrainedBy"/>
+            <Class IRI="#Gianluca"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PullUp"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#UseThisBodyPart"/>
+            <Class IRI="#Back"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Shoulder"/>
+        <Class IRI="#BodyParts"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Shoulder"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#HasIntencity"/>
+            <NamedIndividual IRI="#Low"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Shoulder_press"/>
+        <Class IRI="#Bodybuilding"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Shoulder_press"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#TrainedBy"/>
+            <Class IRI="#Paolo"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Shoulder_press"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#UseThisBodyPart"/>
+            <Class IRI="#Shoulder"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Squat"/>
+        <Class IRI="#Bodybuilding"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Squat"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#TrainedBy"/>
+            <Class IRI="#Valeria"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Squat"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#UseThisBodyPart"/>
+            <Class IRI="#Legs"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Valeria"/>
+        <Class IRI="#Trainers"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Weigh_room"/>
+        <Class IRI="#Rooms"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Activity"/>
+        <Class IRI="#BodyParts"/>
+        <Class IRI="#Rooms"/>
+        <Class IRI="#Trainers"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Arms"/>
+        <Class IRI="#Back"/>
+        <Class IRI="#Chest"/>
+        <Class IRI="#Legs"/>
+        <Class IRI="#Shoulder"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Bodybuilding"/>
+        <Class IRI="#Crossfit"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Chest_press"/>
+        <Class IRI="#Shoulder_press"/>
+        <Class IRI="#Squat"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#CrossFit_room"/>
+        <Class IRI="#Weigh_room"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Dips"/>
+        <Class IRI="#PullUp"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Gianluca"/>
+        <Class IRI="#Maria"/>
+        <Class IRI="#Paolo"/>
+        <Class IRI="#Valeria"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#Chest_press"/>
+        <NamedIndividual IRI="#ChestPressSerie1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Clients"/>
+        <NamedIndividual IRI="#Client1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Curl"/>
+        <NamedIndividual IRI="#CurlSerie1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Intencity"/>
+        <NamedIndividual IRI="#High"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Intencity"/>
+        <NamedIndividual IRI="#Low"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Intencity"/>
+        <NamedIndividual IRI="#Medium"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PullUp"/>
+        <NamedIndividual IRI="#PullUpSerie1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Squat"/>
+        <NamedIndividual IRI="#SquatSerie1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Squat"/>
+        <NamedIndividual IRI="#SquatSerie2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Clients"/>
+        <NamedIndividual IRI="#client2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Clients"/>
+        <NamedIndividual IRI="#client3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Clients"/>
+        <NamedIndividual IRI="#client4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Clients"/>
+        <NamedIndividual IRI="#client5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Clients"/>
+        <NamedIndividual IRI="#client6"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#CoolDown"/>
+        <NamedIndividual IRI="#ChestPressSerie1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">70</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#CoolDown"/>
+        <NamedIndividual IRI="#CurlSerie1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">50</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#CoolDown"/>
+        <NamedIndividual IRI="#PullUpSerie1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">120</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#CoolDown"/>
+        <NamedIndividual IRI="#SquatSerie1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">150</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#CoolDown"/>
+        <NamedIndividual IRI="#SquatSerie2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">150</Literal>
+    </DataPropertyAssertion>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#HasLocated"/>
+        <ObjectProperty IRI="#IsLocatedOn"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#IsBodyPartOf"/>
+        <ObjectProperty IRI="#UseThisBodyPart"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#IsTrainerOf"/>
+        <ObjectProperty IRI="#TrainedBy"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#HasIntencity"/>
+        <Class IRI="#BodyParts"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#HasLocated"/>
+        <Class IRI="#Rooms"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#IsBodyPartOf"/>
+        <Class IRI="#BodyParts"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#IsLocatedOn"/>
+        <Class IRI="#Activity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#IsTrainerOf"/>
+        <Class IRI="#Trainers"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#TrainedBy"/>
+        <Class IRI="#Activity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#UseThisBodyPart"/>
+        <Class IRI="#Activity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#HasIntencity"/>
+        <Class IRI="#Intencity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#HasLocated"/>
+        <Class IRI="#Activity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#IsBodyPartOf"/>
+        <Class IRI="#Activity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#IsLocatedOn"/>
+        <Class IRI="#Rooms"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#IsTrainerOf"/>
+        <Class IRI="#Activity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#TrainedBy"/>
+        <Class IRI="#Trainers"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#UseThisBodyPart"/>
+        <Class IRI="#BodyParts"/>
+    </ObjectPropertyRange>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#CoolDown"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#chancesOfInjuries"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="#NumberPeopleInsideRoom"/>
+        <Class IRI="#Clients"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#RemainingCapacity"/>
+        <Class IRI="#Clients"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#chancesOfInjuries"/>
+        <Class IRI="#Activity"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#NumberPeopleInsideRoom"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#RemainingCapacity"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#chancesOfInjuries"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>HasEmptyRoom</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Rooms"/>
+                <Variable IRI="#r"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#NumberPeopleInsideRoom"/>
+                <Variable IRI="#r"/>
+                <Variable IRI="#pr"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#lessThan">
+                <Variable IRI="#pr"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">15</Literal>
+            </BuiltInAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#greaterThan">
+                <Variable IRI="#pr"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">0</Literal>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <DataPropertyAtom>
+                <DataProperty IRI="#RemainingCapacity"/>
+                <Variable IRI="#r"/>
+                <Literal>high</Literal>
+            </DataPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>HasHalf Capacity</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Rooms"/>
+                <Variable IRI="#r"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#NumberPeopleInsideRoom"/>
+                <Variable IRI="#r"/>
+                <Variable IRI="#pr"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#greaterThan">
+                <Variable IRI="#pr"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">40</Literal>
+            </BuiltInAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#lessThan">
+                <Variable IRI="#pr"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">60</Literal>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <DataPropertyAtom>
+                <DataProperty IRI="#RemainingCapacity"/>
+                <Variable IRI="#r"/>
+                <Literal>medium</Literal>
+            </DataPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>HasFullyRoom</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Rooms"/>
+                <Variable IRI="#r"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#NumberPeopleInsideRoom"/>
+                <Variable IRI="#r"/>
+                <Variable IRI="#pr"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#greaterThan">
+                <Variable IRI="#pr"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">90</Literal>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <DataPropertyAtom>
+                <DataProperty IRI="#RemainingCapacity"/>
+                <Variable IRI="#r"/>
+                <Literal>low</Literal>
+            </DataPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>CapactyRooms</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Rooms"/>
+                <Variable IRI="#r"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#NumberPeopleInsideRoom"/>
+                <Variable IRI="#r"/>
+                <Variable IRI="#pr"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#subtract">
+                <Variable IRI="#pr"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">100</Literal>
+                <Variable IRI="#units"/>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <DataPropertyAtom>
+                <DataProperty IRI="#RemainingCapacity"/>
+                <Variable IRI="#r"/>
+                <Variable IRI="#units"/>
+            </DataPropertyAtom>
+        </Head>
+    </DLSafeRule>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
